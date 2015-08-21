@@ -10,6 +10,14 @@ $(document).ready(function() {
   }
 
   $("tr").wrapAll('<table></table>');
+  $(".square").css("padding-bottom", $("td").width())
+
+  $(window).on("resize", function(){
+    var paddingBottom = $("td").width();
+    console.log(paddingBottom);
+    $(".square").css("padding-bottom", paddingBottom);
+  });
+
 
   $(".wrapper").on("mouseover", ".square", function()
   {
@@ -40,6 +48,7 @@ $(document).ready(function() {
       }
 
       $("tr").wrapAll('<table></table>');
+      $(".square").css("padding-bottom", $("td").width())
     }
   });
 
